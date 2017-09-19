@@ -135,7 +135,7 @@ handle_file()
     fi
     unzip v2ray.zip "*/v2ray" && rm v2ray.zip && mv v2ray* v2ray
     chmod 755 v2ray/v2ray
-    if [ ! -f v2ray/config ]; then
+    if [ ! -f v2ray/config.json ]; then
         echo 请修改自行本配置文件 > v2ray/config.json
     fi
 }
