@@ -133,7 +133,7 @@ handle_file()
 		echo -e "\033[41;37m kcptun installed failed \033[0m"
         exit 1
     fi
-    unzip v2ray.zip "*/v2ray" && rm v2ray.zip && mv v2ray* v2ray
+    unzip -o -j v2ray.zip "*/v2ray" -d v2ray && rm v2ray.zip
     chmod 755 v2ray/v2ray
     if [ ! -f v2ray/config.json ]; then
         echo 请修改自行本配置文件 > v2ray/config.json
